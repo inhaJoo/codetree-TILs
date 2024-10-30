@@ -17,7 +17,7 @@ public class Main {
 
             sum+=arr[i];
             int cnt = i+1;
-            average=sum/cnt;
+            average=(double)sum/cnt;
 
         }
 
