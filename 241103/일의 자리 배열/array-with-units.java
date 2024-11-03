@@ -18,10 +18,11 @@ public class Main {
         }
 
         for(int i=0; i<arr.length; i++) {
-            if(arr[i] > 100) {
+            if(arr[i] >= 100) {
                 int num = arr[i] % 100;
-                arr[i] = num % 10;
-            }else if(arr[i] > 10) {
+                if(num != 0)
+                    arr[i] = num % 10;
+            }else if(arr[i] >= 10) {
                 arr[i] = arr[i] % 10;
             }
             System.out.printf("%d ", arr[i]);
