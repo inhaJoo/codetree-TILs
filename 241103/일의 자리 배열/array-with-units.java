@@ -19,9 +19,11 @@ public class Main {
 
         for(int i=0; i<arr.length; i++) {
             if(arr[i] >= 100) {
-                int num = arr[i] % 100;
+                int num = arr[i]%=100;
                 if(num != 0)
                     arr[i] = num % 10;
+                else
+                    arr[i] = num;
             }else if(arr[i] >= 10) {
                 arr[i] = arr[i] % 10;
             }
