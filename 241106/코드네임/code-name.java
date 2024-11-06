@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,7 +17,14 @@ public class Main {
             agents[i] = new Agent(codeName, score);
         }
 
-        System.out.printf("%c %d", agents[0].codeName, agents[0].score);
+        int min=0;
+        for(int i=1; i<agents.length; i++) {
+            if(agents[min].score > agents[i].score){
+                min = i;
+            }
+        }
+        
+        System.out.printf("%c %d", agents[min].codeName, agents[min].score);
     }
 }
 
