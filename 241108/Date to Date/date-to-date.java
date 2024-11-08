@@ -16,12 +16,17 @@ public class Main {
         d2 = sc.nextInt();
 
         for(int i=m1; i<=m2; i++) {
-            if(i == m1)
-                result += num_of_days[i] - d1 + 1;
-            else if(i == m2)
-                result += d2;
-            else
-                result += num_of_days[i];
+            if(m1 != m2) {
+                if(i == m1)
+                    result += num_of_days[i] - d1 + 1;
+                else if(i == m2)
+                    result += d2;
+                else
+                    result += num_of_days[i];
+            }else{
+                result = d2 - d1;
+            }
+           
         }
 
        System.out.print(result);
