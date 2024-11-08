@@ -4,6 +4,10 @@ public class Main {
     static int calculator(int a, int b, int c) {
         int startDateTime = (11 * 24 * 60) + (11 * 60) + 11;
         int endDatetime = (a * 24 * 60) + (b * 60) + c;
+
+        if(startDateTime > endDatetime) {
+            return -1;
+        }
         return endDatetime - startDateTime;
     }
     public static void main(String[] args) {
