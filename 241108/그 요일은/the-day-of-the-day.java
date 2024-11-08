@@ -31,14 +31,12 @@ public class Main {
                 idx=i;
             }
         }
-        System.out.println(week);
 
         if(week == 0) {
             counts[idx] = cnt;
         }else {
             for(int j=0; j<week; j++) {
-                counts[idx] = cnt;
-                cnt++;
+                counts[idx] = ++cnt;
             }
         }
 
