@@ -24,7 +24,7 @@ public class Main {
                 else
                     result += num_of_days[i];
             }else{
-                result = d2 - d1;
+                result = d2 - d1 + 1;
             }
            
         }
