@@ -31,10 +31,15 @@ public class Main {
                 idx=i;
             }
         }
+        System.out.println(week);
 
-        for(int j=0; j<=week; j++) {
+        if(week == 0) {
             counts[idx] = cnt;
-            cnt++;
+        }else {
+            for(int j=0; j<week; j++) {
+                counts[idx] = cnt;
+                cnt++;
+            }
         }
 
         result = counts[idx];
